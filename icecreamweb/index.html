@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice cream Website landing page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body>
+    <section>
+        <div class="polygon"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+    <div class="content">
+        <div class="textBox">
+            <h2>Share a scoop of happiness with <span>Jeni's ice cream</span></h2>
+            <p>Our ice creams have a uniquely smooth texture and buttercream body, 
+                with bright flavor and clean finish (we don’t use synthetic flavorings, 
+                dyes, or off-the-shelf mixes). You may notice the absence of a long 
+                list of stabilizers and emulsifiers on our label; we prefer the more 
+                complex process of building texture and flavor without them. Our flavors 
+                stand alone straight from the pint or melt perfectly into a fruit pie, birthday cake, 
+                crumble, crisp, or cookie—the perfect accessory for your dessert.
+            </p>
+            <a href="#">Learn more</a>
+        </div>
+        <div class="imgBox">
+            <img src="main.png" class="icecream">
+        </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="thumb1.png" onclick="imgSlider('large1.png');changePolygonColor('#319FCB')"></li>
+        <li><img src="thumb2.png" onclick="imgSlider('large2.png');changePolygonColor('#EB984E')"></li>
+        <li><img src="thumb3.png" onclick="imgSlider('large3.png');changePolygonColor('#40E0D0')"></li>
+    </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.icecream').src = anything;
+        }
+
+        function changePolygonColor(color){
+            const polygon = document.querySelector('.polygon');
+            polygon.style.background = color;
+        }
+
+    </script>
+ </body>
+</html>
